@@ -35,10 +35,10 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="425" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="494" max="32767" attributes="0"/>
+              <EmptySpace pref="636" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-              <Component id="jPanel4" alignment="0" pref="1138" max="32767" attributes="0"/>
+              <Component id="jPanel4" alignment="0" pref="1280" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -103,7 +103,7 @@
                       </Group>
                       <Component id="jScrollPane1" min="-2" pref="603" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -130,7 +130,7 @@
                       <Component id="btnXoa" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="btnPrint" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="219" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="215" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -215,11 +215,14 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblViTri1" min="-2" pref="175" max="-2" attributes="0"/>
-                          <Component id="lblTenTheLoai1" min="-2" pref="175" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
+                              <Component id="lblTenTheLoai1" min="-2" pref="175" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="lblMaTheLoai1" min="-2" pref="175" max="-2" attributes="0"/>
-                          <Component id="txtViTri" min="-2" pref="175" max="-2" attributes="0"/>
-                          <Component id="txtTenTheLoai" min="-2" pref="175" max="-2" attributes="0"/>
                           <Component id="txtMaTheLoai" min="-2" pref="175" max="-2" attributes="0"/>
+                          <Component id="txtTenTheLoai" min="-2" pref="175" max="-2" attributes="0"/>
+                          <Component id="txtViTri" min="-2" pref="175" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
@@ -244,8 +247,8 @@
                       <Component id="lblTenTheLoai1" min="-2" pref="15" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtViTri" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtViTri" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="lblViTri1" min="-2" pref="15" max="-2" attributes="0"/>
@@ -291,6 +294,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtTenTheLoai">
               <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTenTheLoaiActionPerformed"/>
                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtTenTheLoaiKeyReleased"/>
               </Events>
             </Component>

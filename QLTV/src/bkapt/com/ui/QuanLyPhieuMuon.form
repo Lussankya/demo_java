@@ -40,7 +40,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel3" alignment="0" pref="724" max="32767" attributes="0"/>
+          <Component id="jPanel3" alignment="0" pref="718" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -215,7 +215,7 @@
                               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jDateChooser1" alignment="0" pref="150" max="32767" attributes="0"/>
+                                      <Component id="jDateChooser1" alignment="0" max="32767" attributes="0"/>
                                       <Component id="lblSoLuong1" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jDateChooser2" max="32767" attributes="0"/>
                                   </Group>
@@ -298,6 +298,9 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JTextField" name="txtMaPhieuMuon">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMaPhieuMuonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
@@ -349,11 +352,13 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtSoLuong">
               <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSoLuongActionPerformed"/>
                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtSoLuongKeyReleased"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtMaSV">
               <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMaSVActionPerformed"/>
                 <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtMaSVKeyReleased"/>
               </Events>
             </Component>

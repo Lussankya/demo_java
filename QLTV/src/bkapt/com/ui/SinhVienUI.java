@@ -179,13 +179,13 @@ public class SinhVienUI extends javax.swing.JFrame {
             for(PhieuMuon pm: listpm){
                 List<SachPhieuMuon> listspm = spmdao.findByMaPhieu(pm.getMaPhieuMuon());               
                 Object[] row = new Object[]{
-                    pm.getMaPhieuMuon(),listspm.size(),pm.getNgayMuon(),pm.getNgayHenTra()
+                    pm.getMaPhieuMuon(),pm.getSoLuong(),pm.getNgayMuon(),pm.getNgayHenTra()
                 };
                 model.addRow(row);
             }
     }
     public void insertpm(PhieuMuon pm,DefaultListModel modelList){
-//        PhieuMuon pm =  new PhieuMuon();
+//       PhieuMuon pm =  new PhieuMuon();
         PhieuMuonDAO pmdao =new PhieuMuonDAO() ;
         SachDAO sdao = new SachDAO();
         SachPhieuMuonDao spmdao = new SachPhieuMuonDao();
@@ -1333,6 +1333,7 @@ public class SinhVienUI extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new SinhVienUI().setVisible(true);
             }

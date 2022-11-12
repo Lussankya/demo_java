@@ -92,9 +92,9 @@ public class TheLoaiSachDAO extends Connect{
         {
             String sql="Update TheLoaiSach set TenTheLoai = ? , ViTri = ? Where MaTheLoai = ?";
             PreparedStatement ps =con.prepareStatement(sql);
-                ps.setString(1, tls.getTenTheLoai());
-                ps.setString(2, tls.getViTri());
-                ps.setString(3, tls.getMaTheLoai());
+                ps.setString(1, tls.getMaTheLoai());
+                ps.setString(2, tls.getTenTheLoai());
+                ps.setString(3, tls.getViTri());
              return ps.executeUpdate();
         }
         catch(Exception ex)

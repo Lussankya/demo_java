@@ -10,15 +10,25 @@ package bkapt.com.model;
  * @author Admin
  */
 public class SachPhieuMuon {
+    public int ma;
     public String maPhieuMuon;
     public String maSach;
 
     public SachPhieuMuon() {
     }
 
-    public SachPhieuMuon(String maPhieuMuon, String maSach) {
+    public SachPhieuMuon(int ma,String maPhieuMuon, String maSach) {
+        this.ma = ma;
         this.maPhieuMuon = maPhieuMuon;
         this.maSach = maSach;
+    }
+
+    public int getMa() {
+        return ma;
+    }
+
+    public void setMa(int ma) {
+        this.ma = ma;
     }
 
     public String getMaPhieuMuon() {

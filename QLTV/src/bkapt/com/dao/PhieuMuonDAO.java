@@ -42,7 +42,9 @@ public class PhieuMuonDAO extends Connect{
                     rs.getString(1),
                     rs.getString(2), 
                     rs.getString(3),
-                    rs.getString(4));
+                    rs.getInt(4),
+                    rs.getString(5),
+                    rs.getString(6));
                     lists.add(pm);
                 
             }
@@ -58,12 +60,15 @@ public class PhieuMuonDAO extends Connect{
     {
         try
         {
-            String sql="Insert into PhieuMuon values(?,?,?,?)";
+            String sql="Insert into PhieuMuon values(?,?,?,?,?,?)";
             CallableStatement ps =con.prepareCall(sql);
-                ps.setString(1,pm.getMaPhieuMuon());
-                ps.setString(2, pm.getMaSV());
-                ps.setString(3, pm.getNgayHenTra());
-                ps.setString(4, pm.getNgayHenTra());
+                //ps.setString(1,pm.getMaPhieuMuon());
+                ps.setString(1, pm.getMaSV());
+                ps.setString(2, pm.getMaSach());
+                ps.setInt(3, pm.getSoLuong());
+      
+//                ps.setString(5, pm.getNgayMuon());
+//                ps.setString(6, pm.getNgayHenTra());
              return ps.executeUpdate();
            
         }
@@ -79,10 +84,18 @@ public class PhieuMuonDAO extends Connect{
         {
             String sql="Update PhieuMuon SET MaSV = ?, NgayMuon = ?, NgayHenTra  = ? WHERE MaPhieuMuon = ?";
             CallableStatement ps =con.prepareCall(sql);
-                ps.setString(1, pm.getMaSV());
-                ps.setString(2, pm.getNgayMuon());
-                ps.setString(3, pm.getNgayHenTra());
-                ps.setString(4,pm.getMaPhieuMuon());
+//                ps.setString(1, pm.getMaSV());
+//                ps.setString(2, pm.getNgayMuon());
+//                ps.setInt(3, pm.getSoLuong());
+//                ps.setString(4, pm.getNgayHenTra());
+//                ps.setString(5,pm.getMaPhieuMuon());
+                ps.setString(1,pm.getMaPhieuMuon());
+                ps.setString(2, pm.getMaSV());
+                ps.setString(3, pm.getMaSach());
+                ps.setInt(4, pm.getSoLuong());
+      
+                ps.setString(5, pm.getNgayMuon());
+                ps.setString(6, pm.getNgayHenTra());
              return ps.executeUpdate();
               
         }
@@ -116,8 +129,10 @@ public class PhieuMuonDAO extends Connect{
             PhieuMuon pm = new PhieuMuon();
             pm.setMaPhieuMuon(rs.getString(1));
             pm.setMaSV(rs.getString(2));
-            pm.setNgayMuon(rs.getString(3));
-            pm.setNgayHenTra(rs.getString(4));
+            pm.setMaSach(rs.getString(3));
+            pm.setSoLuong(rs.getInt(4));
+            pm.setNgayMuon(rs.getString(5));
+            pm.setNgayHenTra(rs.getString(6));
             lists.add(pm);          
           }
         }

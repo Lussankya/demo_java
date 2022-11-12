@@ -31,7 +31,9 @@ public class SachPhieuMuonDao extends Connect{
              ResultSet rs = cs.executeQuery();
              while (rs.next()) { 
                 SachPhieuMuon muon = new SachPhieuMuon();
-                muon.setMaSach(rs.getString(1));
+                muon.setMa(rs.getInt(1));
+                muon.setMaPhieuMuon(rs.getString(2));
+                muon.setMaSach(rs.getString(3));
                 list.add(muon);
             }
         } catch (SQLException ex) {
@@ -59,13 +61,14 @@ public class SachPhieuMuonDao extends Connect{
        
         return list;
     }
-    public int insert(String maPhieu,String maSach){
-        String sql = "INSERT INTO SachPhieuMuon VALUES(?,?)";
+    public int insert(int ma, String maPhieu,String maSach){
+        String sql = "INSERT INTO SachPhieuMuon VALUES(?,?,?)";
         PreparedStatement ps;
         try {
             ps = con.prepareCall(sql);
-            ps.setString(1, maPhieu);
-            ps.setString(2, maSach);
+            ps.setInt(1, ma);
+            ps.setString(2, maPhieu);
+            ps.setString(3, maSach);
             return ps.executeUpdate();
         } catch (SQLException ex) {
             System.err.println("Loi: "+ex.getMessage());
@@ -82,5 +85,10 @@ public class SachPhieuMuonDao extends Connect{
         } catch (SQLException ex) {
             return 0;
         }
+    }
+    
+
+    public int insert(String maPhieuMuon, String maSach) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

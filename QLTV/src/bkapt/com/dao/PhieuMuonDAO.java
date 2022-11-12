@@ -62,13 +62,13 @@ public class PhieuMuonDAO extends Connect{
         {
             String sql="Insert into PhieuMuon values(?,?,?,?,?,?)";
             CallableStatement ps =con.prepareCall(sql);
-                //ps.setString(1,pm.getMaPhieuMuon());
-                ps.setString(1, pm.getMaSV());
-                ps.setString(2, pm.getMaSach());
-                ps.setInt(3, pm.getSoLuong());
+                ps.setString(1,pm.getMaPhieuMuon());
+                ps.setString(2, pm.getMaSV());
+                ps.setString(3, pm.getMaSach());
+                ps.setInt(4, pm.getSoLuong());
       
-//                ps.setString(5, pm.getNgayMuon());
-//                ps.setString(6, pm.getNgayHenTra());
+                ps.setString(5, pm.getNgayMuon());
+                ps.setString(6, pm.getNgayHenTra());
              return ps.executeUpdate();
            
         }

@@ -833,7 +833,7 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
             listBookItem.setModel(modelList);
             txtSoLuong.setText(String.valueOf(modelList.getSize()));
         }
-//        Sach s = sdao.findId(listSachCon.getSelectedValue().getMaSach());
+//       Sach s = sdao.findId(listSachCon.getSelectedValue().getMaSach());
 //        modelList.addElement(s.getTenSach());
 //        JOptionPane.showMessageDialog(this, s.getTenSach());
 //        modelList.addElement(value); // Thêm và List bên trái

@@ -59,8 +59,8 @@ public class QuanLyTacGia extends javax.swing.JInternalFrame {
         tg.setTen(txtTenTG.getText());
         Date date = txtbirthday.getDate();
         String df = new SimpleDateFormat("yyyy-MM-dd").format(date);
-        tg.setTen(txtDiaChi.getText());
-        tg.setMatg(txtEmail.getText());
+        tg.setDiachi(txtDiaChi.getText());
+        tg.setEmail(txtEmail.getText());
         tg.setNgaysinh(df);
         TacGiaDAO tgdao =new TacGiaDAO() ;
         if (tgdao.insert(tg)>0 )
@@ -464,7 +464,7 @@ public class QuanLyTacGia extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1138, Short.MAX_VALUE)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 1188, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

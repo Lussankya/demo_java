@@ -831,7 +831,7 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
             String valueRemove = (String) listDSsach.getElementAt(selected[i]);
             modelList.addElement(valueRemove);
             listBookItem.setModel(modelList);
-            txtSoLuong.setText(String.valueOf(modelList.getSize()));
+            txtSoLuong.setText(Integer.toString(modelList.getSize()));
         }
 //       Sach s = sdao.findId(listSachCon.getSelectedValue().getMaSach());
 //        modelList.addElement(s.getTenSach());

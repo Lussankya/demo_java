@@ -20,7 +20,7 @@ public class Connect {
             
             //Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url="jdbc:mysql://localhost:3306/QLTV2";
-            con=DriverManager.getConnection(url,"root","26070833857552");
+            con=DriverManager.getConnection(url,"root","");
         }
            catch(Exception ex)
             {

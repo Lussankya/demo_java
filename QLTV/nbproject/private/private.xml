@@ -3,17 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/helper/Connect.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/ui/ThongKeUI.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/ui/LoginUI.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/ui/ChaoJDialog.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/ui/QuanLy.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/ui/QuanLyPhieuMuon.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/dao/SinhVienDAO.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/dao/SachPhieuMuonDao.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/ui/SinhVienUI.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/dao/SachDAO.java</file>
-            <file>file:/D:/Downloads/Nhom9/QLTV/src/bkapt/com/dao/PhieuMuonDAO.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/model/Sach.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/dao/SachPhieuMuonDao.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/dao/ThongKeDAO.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/dao/TacGiaDAO.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/ui/SinhVienUI.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/helper/Connect.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/ui/QuanLyPhieuMuon.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/dao/NXBDAO.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/ui/QuanLyTacGia.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/ui/QuanLyNXB.java</file>
+            <file>file:/C:/Users/ABC/Desktop/Baitaplon/QLTV/src/bkapt/com/dao/PhieuMuonDAO.java</file>
         </group>
     </open-files>
 </project-private>

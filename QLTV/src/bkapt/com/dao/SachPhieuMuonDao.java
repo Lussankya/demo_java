@@ -26,7 +26,7 @@ public class SachPhieuMuonDao extends Connect{
         List<SachPhieuMuon> list = new ArrayList<>();
         CallableStatement cs;
         try {
-            cs = con.prepareCall("{call sp_MaSachLoad(?)}");
+            cs = con.prepareCall("{call sp_MaSachPM(?)}");
              cs.setString(1, id);
              ResultSet rs = cs.executeQuery();
              while (rs.next()) { 

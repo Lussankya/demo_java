@@ -126,7 +126,7 @@ public class ThongKeUI extends javax.swing.JInternalFrame {
                 row[1] = sv.getPassword();
                 row[2] = sv.getHoTen();
                 row[3] = sv.getNgaySinh();
-                if(sv.isGioiTinh()==true){
+                if(sv.isGioiTinh()==false){
                     row[4] = "Nam";
                 }else{
                     row[4] = "Nữ";

@@ -413,8 +413,6 @@ public class ThongKeDAO extends Connect{
             rs.getString("MaPhieuMuon"),
             rs.getString("MaSV"),
             rs.getString("HoTen"),
-            rs.getString("MaSach"),
-            rs.getString("TenSach"),
             rs.getInt("SoLuong"),
             rs.getString("NgayMuon"),
             rs.getString("NgayHenTra"),
@@ -439,8 +437,7 @@ public class ThongKeDAO extends Connect{
             rs.getString("MaPhieuMuon"),
             rs.getString("MaSV"),
             rs.getString("HoTen"),
-            rs.getString("MaSach"),
-            rs.getString("TenSach"),
+            
             rs.getInt("SoLuong"),
             rs.getString("NgayMuon"),
             rs.getString("NgayHenTra"), };
@@ -480,8 +477,7 @@ public class ThongKeDAO extends Connect{
             rs.getString("MaPhieuMuon"),
             rs.getString("MaSV"),
             rs.getString("HoTen"),
-            rs.getString("MaSach"),
-            rs.getString("TenSach"),
+           
             rs.getInt("SoLuong"),
             rs.getString("NgayMuon"),
             rs.getString("NgayHenTra"), };
@@ -616,8 +612,7 @@ public class ThongKeDAO extends Connect{
             rs.getString("MaPhieuMuon"),
             rs.getString("MaSV"),
             rs.getString("HoTen"),
-            rs.getString("MaSach"),
-            rs.getString("TenSach"),
+            
             rs.getInt("SoLuong"),
             rs.getString("NgayMuon"),
             rs.getString("NgayHenTra"),
@@ -629,7 +624,7 @@ public class ThongKeDAO extends Connect{
         }
         return list;
     }
-    public List<Object[]> TKSVQuaHanTraSachPM(){
+    public List<Object[]> TKSVQuaHanTraSachPM(){                  
         List<Object[]> list=new ArrayList<>();
     try{
         ResultSet rs = null;
@@ -641,8 +636,7 @@ public class ThongKeDAO extends Connect{
             rs.getString("MaPhieuMuon"),
             rs.getString("MaSV"),
             rs.getString("HoTen"),
-            rs.getString("MaSach"),
-            rs.getString("TenSach"),
+          
             rs.getInt("SoLuong"),
             rs.getString("NgayMuon"),
             rs.getString("NgayHenTra"),

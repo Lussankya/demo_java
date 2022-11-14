@@ -56,7 +56,7 @@ public class QuanLySinhVien extends javax.swing.JInternalFrame {
                 row[4] = sv.getNgaySinh();
                 if(sv.isGioiTinh()==true){
                     row[5] = "Nam";
-                }else if(sv.isGioiTinh()==false){
+                }else{
                     row[5] = "Nữ";
                 }
                 row[6] = sv.getDiaChi();

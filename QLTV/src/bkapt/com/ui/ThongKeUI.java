@@ -126,7 +126,7 @@ public class ThongKeUI extends javax.swing.JInternalFrame {
                 row[1] = sv.getPassword();
                 row[2] = sv.getHoTen();
                 row[3] = sv.getNgaySinh();
-                if(sv.isGioiTinh()==false){
+                if(sv.isGioiTinh()==true){
                     row[4] = "Nam";
                 }else{
                     row[4] = "Nữ";
@@ -147,7 +147,7 @@ public class ThongKeUI extends javax.swing.JInternalFrame {
                 row[1] = sv.getPassword();
                 row[2] = sv.getHoTen();
                 row[3] = sv.getNgaySinh();
-                if(sv.isGioiTinh()==false){
+                if(sv.isGioiTinh()==true){
                     row[4] = "Nam";
                 }else{
                     row[4] = "Nữ";
@@ -169,7 +169,7 @@ public class ThongKeUI extends javax.swing.JInternalFrame {
                 row[1] = sv.getPassword();
                 row[2] = sv.getHoTen();
                 row[3] = sv.getNgaySinh();
-                if(sv.isGioiTinh()==false){
+                if(sv.isGioiTinh()==true){
                     row[4] = "Nam";
                 }else{
                     row[4] = "Nữ";
@@ -191,7 +191,7 @@ public class ThongKeUI extends javax.swing.JInternalFrame {
                 row[1] = sv.getPassword();
                 row[2] = sv.getHoTen();
                 row[3] = sv.getNgaySinh();
-                if(sv.isGioiTinh()==false){
+                if(sv.isGioiTinh()==  true){
                     row[4] = "Nam";
                 }else{
                     row[4] = "Nữ";
@@ -890,15 +890,23 @@ public class ThongKeUI extends javax.swing.JInternalFrame {
 
         tblPM.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Mã PM", "Mã SV", "Tên SV", "Mã Sách", "Tên Sách", "Số lượng", "Ngày Mượn", "Ngày Hẹn Trả"
+                "Mã PM", "Mã SV", "Tên SV", "Số lượng", "Ngày Mượn", "Ngày Hẹn Trả"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                true, true, false, true, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblPM.setRowHeight(30);
         jScrollPane5.setViewportView(tblPM);
 

@@ -91,9 +91,10 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
         PhieuMuon pm =  new PhieuMuon();       
         pm.setMaPhieuMuon(txtMaPhieuMuon.getText());
         pm.setMaSV(txtMaSV.getText());
-         for (int i = 0; i < modelList.getSize(); i++) {
+        for (int i = 0; i < modelList.getSize(); i++) {
             Object item = modelList.getElementAt(i);
-            System.out.println("Item = " + item);
+             System.out.println("Item = " + item);
+             
         }
         Date date = jDateChooser1.getDate();
         String ngayMuon = new SimpleDateFormat("yyyy-MM-dd").format(date);
@@ -491,7 +492,7 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
         jLabel2.setText("Quản Lý Phiếu Mượn");
 
         jPanel2.setBackground(new java.awt.Color(209, 202, 202));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm theo mã SV, mã Sách", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 14))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tìm kiếm theo mã SV, mã Phiếu mượn", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 1, 14))); // NOI18N
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bkapt/com/icon/Search.png"))); // NOI18N
@@ -734,7 +735,7 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1138, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1142, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

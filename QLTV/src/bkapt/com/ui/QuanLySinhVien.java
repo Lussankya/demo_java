@@ -354,7 +354,7 @@ public class QuanLySinhVien extends javax.swing.JInternalFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Masv", "Password", "Lớp", "Họ và tên", "Ngày Sinh", "Giới tính", "Địa chỉ", "Sđt", "Email"
+                "Masv", "Password", "Mã Lớp", "Họ và tên", "Ngày Sinh", "Giới tính", "Địa chỉ", "Sđt", "Email"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -713,7 +713,7 @@ public class QuanLySinhVien extends javax.swing.JInternalFrame {
                         .addComponent(pnl2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pnlThongTin, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(pnlThongTin, javax.swing.GroupLayout.PREFERRED_SIZE, 453, Short.MAX_VALUE))
                 .addGap(40, 40, 40)
                 .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTaoMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)

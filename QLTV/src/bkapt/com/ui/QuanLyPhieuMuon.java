@@ -132,26 +132,27 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
         
     }
         public void update(){
-        PhieuMuon pm =  new PhieuMuon();
-        pm.setMaPhieuMuon(txtMaPhieuMuon.getText());
-        pm.setMaSV(txtMaSV.getText());
-        Date date = jDateChooser1.getDate();
-        String df = new SimpleDateFormat("yyyy-MM-dd").format(date);
-        Date date1 = jDateChooser2.getDate(); 
-        String dff = new SimpleDateFormat("yyyy-MM-dd").format(date);
-        pm.setNgayMuon(df);
-        pm.setNgayHenTra(dff);
-        PhieuMuonDAO pmdao = new PhieuMuonDAO() ;
+        PhieuMuon pm =  new PhieuMuon(); // tạo lớp PhieuMuon mới chèn vào lớp PhieuMuon cần sửa
+        pm.setMaPhieuMuon(txtMaPhieuMuon.getText());//Sửa lại Mã Phiếu và lưu vào txtMaPhieuMuon
+        pm.setMaSV(txtMaSV.getText());// Sửa lại Mã sinh viên và lưu vào txtMaSV
+        Date date = jDateChooser1.getDate();// sửa ngày mượn mới
+        String df = new SimpleDateFormat("yyyy-MM-dd").format(date);//khai báo định dạng ngày mượn mới
+        Date date1 = jDateChooser2.getDate(); // sửa ngày trả mới
+        String dff = new SimpleDateFormat("yyyy-MM-dd").format(date);// khai báo định dạng ngày trả mới
+        pm.setNgayMuon(df);//set ngày mượn mới
+        pm.setNgayHenTra(dff);// set ngày trả mới
+        PhieuMuonDAO pmdao = new PhieuMuonDAO() ;// khởi tạo PhieuMuonDAO mới
         SachPhieuMuonDao spmdao = new SachPhieuMuonDao();
-       if(pmdao.update(pm)>0 && modelList.getSize()>0){
+        if(pmdao.update(pm)>0 && modelList.getSize()>0){
              //Duyệt sách
              spmdao.delete(pm.getMaPhieuMuon());
              addBookSuccess = 0;
-             for (int i = 0; i < modelList.getSize(); i++) {
-                 Sach s = sdao.findName(modelList.getElementAt(i).toString());
-                     if (spmdao.insert(pm.getMaPhieuMuon(),s.getMaSach())>0 )
+             for (int i = 0; i < modelList.getSize(); i++) // duyệt danh sách của sách
+             {
+                 Sach s = sdao.findName(modelList.getElementAt(i).toString());// tìm sách dựa vào tên sách
+                     if (spmdao.insert(pm.getMaPhieuMuon(),s.getMaSach())>0 )// thêm vào bảng sách phiếu mượn
                      {    
-                       addBookSuccess++;                     
+                       addBookSuccess++;//thông báo thành công                 
                      }  
             }
              if(addBookSuccess == modelList.size()){

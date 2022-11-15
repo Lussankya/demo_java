@@ -61,14 +61,15 @@ public class SachPhieuMuonDao extends Connect{
        
         return list;
     }
-    public int insert(int ma, String maPhieu,String maSach){
+    //public int insert(int ma, String maPhieu,String maSach){
+        public int insert( String maPhieu){
         String sql = "INSERT INTO SachPhieuMuon VALUES(?,?,?)";
         PreparedStatement ps;
         try {
             ps = con.prepareCall(sql);
-            ps.setInt(1, ma);
-            ps.setString(2, maPhieu);
-            ps.setString(3, maSach);
+            //ps.setInt(1, ma);
+            ps.setString(1, maPhieu);
+            //ps.setString(3, maSach);
             return ps.executeUpdate();
         } catch (SQLException ex) {
             System.err.println("Loi: "+ex.getMessage());
@@ -89,6 +90,17 @@ public class SachPhieuMuonDao extends Connect{
     
 
     public int insert(String maPhieuMuon, String maSach) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "INSERT INTO SachPhieuMuon VALUES(?,?,?)";
+        PreparedStatement ps;
+        try {
+            ps = con.prepareCall(sql);
+            //ps.setInt(1, 1);
+            ps.setString(1, maPhieuMuon);
+            ps.setString(2, maSach);
+            return ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.err.println("Loi: "+ex.getMessage());
+            return 0;
+        }
     }
 }

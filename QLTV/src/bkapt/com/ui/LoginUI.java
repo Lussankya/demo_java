@@ -122,6 +122,11 @@ public class LoginUI extends javax.swing.JFrame {
         buttonGroup1.add(rdoSinhVien);
         rdoSinhVien.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         rdoSinhVien.setText("Sinh Viên");
+        rdoSinhVien.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rdoSinhVienActionPerformed(evt);
+            }
+        });
 
         btnDangNhap.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bkapt/com/icon/login.png"))); // NOI18N
@@ -218,8 +223,8 @@ public class LoginUI extends javax.swing.JFrame {
                             .addComponent(btnDangNhap, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(46, 46, 46)
                         .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rdoSinhVien)
-                            .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rdoSinhVien, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(74, 74, 74))
             .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnlFormLayout.createSequentialGroup()
@@ -244,11 +249,11 @@ public class LoginUI extends javax.swing.JFrame {
                         .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblPass))
-                        .addGap(31, 31, 31)
+                        .addGap(29, 29, 29)
                         .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rdoAdmin)
-                            .addComponent(rdoSinhVien))
-                        .addGap(22, 22, 22)
+                            .addComponent(rdoSinhVien, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
                         .addGroup(pnlFormLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnDangNhap, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -279,6 +284,10 @@ public class LoginUI extends javax.swing.JFrame {
        DangNhap();
                 
     }//GEN-LAST:event_btnDangNhapActionPerformed
+
+    private void rdoSinhVienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdoSinhVienActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rdoSinhVienActionPerformed
 
     /**
      * @param args the command line arguments

@@ -189,15 +189,16 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
       }
     }
     public void loadMaSV(){
-        PhieuMuonDAO pmdao = new PhieuMuonDAO();
-        lists = pmdao.SearchMaSVMaPhieu(txtSearch.getText());
-            DefaultTableModel model = (DefaultTableModel) tblBangPhieuMuon.getModel();
+        PhieuMuonDAO pmdao = new PhieuMuonDAO(); // khởi tạo PhieuMuonDao
+        lists = pmdao.SearchMaSVMaPhieu(txtSearch.getText());//Tìm mã phiếu mã sinh viên tạo thành 1 lists
+            DefaultTableModel model = (DefaultTableModel) tblBangPhieuMuon.getModel();// tạo bảng
             model.setRowCount(0);
-            for(PhieuMuon pm: lists){
-                Object[] row = new Object[]{
-                    pm.getMaPhieuMuon(),pm.getMaSV(),pm.getNgayMuon(),pm.getNgayHenTra()
+            for(PhieuMuon pm: lists){ // duyệt pm
+                Object[] row = new Object[]{ // Khởi tạo Object
+                    pm.getMaPhieuMuon(),pm.getMaSV(),pm.getNgayMuon(),pm.getNgayHenTra() // get các thông tin đã đc nhập vào các
+                                                                                         // cột tương ứng
                 };
-                model.addRow(row);
+                model.addRow(row); // thêm các hàng ứng với mỗi lần thêm dữ liệu
             }
     }
     public void searchSach(){

@@ -44,16 +44,16 @@ public class QuanLyLop extends javax.swing.JInternalFrame {
         }
     }
       public void insert(){
-        Lop lp =  new Lop();
-        lp.setMalop(txtMaLop.getText());
-        lp.setTen(txtTenLop.getText());
-        LopDAO lpdao =new LopDAO() ;
-        if (lpdao.insert(lp)>0 )
+        Lop lp =  new Lop();// Khởi tạo lớp lp
+        lp.setMalop(txtMaLop.getText());//nhập mã lớp và lưu mã lớp vào text box
+        lp.setTen(txtTenLop.getText());// nhập tên vào lưu tên vào text box
+        LopDAO lpdao =new LopDAO() ;// Khởi tạo 1 lpdao mới
+        if (lpdao.insert(lp)>0 )// nếu chèn >0 
         {    
-            JOptionPane.showMessageDialog(null, "Thêm Lớp thành công");
+            JOptionPane.showMessageDialog(null, "Thêm Lớp thành công");// hiện dialog thành công
         }
-        else{
-            JOptionPane.showMessageDialog(null, "Lớp[ "+txtMaLop.getText()+" ] đã tồn tại không thể thêm");
+        else{ //nếu chèn <0
+            JOptionPane.showMessageDialog(null, "Lớp[ "+txtMaLop.getText()+" ] đã tồn tại không thể thêm");// hiện dialog đã tồn tại lớp
         }     
     }
     public void update(){

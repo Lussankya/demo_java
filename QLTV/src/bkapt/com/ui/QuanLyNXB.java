@@ -74,26 +74,27 @@ public class QuanLyNXB extends javax.swing.JInternalFrame {
         }     
     }
     public void delete(){
-        int index = tblBang.getSelectedRow();
-        if (index == -1) {
+        int index = tblBang.getSelectedRow();//click vào 1 hàng được chọn
+        if (index == -1) // nếu chưa chọn thì thông báo lỗi
+        {
             JOptionPane.showMessageDialog(this, "Vui lòng chọn 1 Nhà Xuất Bản trong bảng để xóa", "Thông Báo", 1);
             return;
         }
-        NXBDAO vpdao =new NXBDAO() ;
+        NXBDAO vpdao =new NXBDAO() ; // khởi tạo NXBDAO vpdao
         
-        int tk = JOptionPane.showConfirmDialog(this, "Bạn có muốn xóa không");
-      if (tk==JOptionPane.YES_OPTION)  
+        int tk = JOptionPane.showConfirmDialog(this, "Bạn có muốn xóa không");//hiện dialog có chắc chắn với lựa chọn
+      if (tk==JOptionPane.YES_OPTION) //nếu chọn YES 
       {
-        if (vpdao.delete(txtMaNXB.getText()))
+        if (vpdao.delete(txtMaNXB.getText())) // xoá nhà xuất bản
         {
-            JOptionPane.showMessageDialog(this, "Xóa Nhà Xuất Bản thành công", "Thông Báo", 1);
+            JOptionPane.showMessageDialog(this, "Xóa Nhà Xuất Bản thành công", "Thông Báo", 1);// hiện dialog thành công
             
         } else {
-            JOptionPane.showMessageDialog(this, "Lỗi hệ thống", "Thông Báo", 0);
+            JOptionPane.showMessageDialog(this, "Lỗi hệ thống", "Thông Báo", 0);// hiện dialog báo lỗi
         }
         
       }
-      else
+      else 
       {
           return;
           

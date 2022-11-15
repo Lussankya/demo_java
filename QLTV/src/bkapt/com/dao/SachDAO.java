@@ -86,7 +86,7 @@ public class SachDAO extends Connect{
     {
         try
         {
-            String sql="Update Sach set TenSach=?, MaTheLoai=?, MaTG=?, SoLuong=?, MaNXB=?, NgayNhap=?, NDTT=?, Hinh=? Where MaSach=?";
+            String sql="Update Sach set TenSach=?, MaTheLoai=?, TacGia=?, SoLuong=?, MaNXB=?, NgayNhap=?, NDTT=?, Hinh=? Where MaSach=?";
             PreparedStatement ps =con.prepareStatement(sql);
                 ps.setString(1, s.getTenSach());
                 ps.setString(2, s.getMaTheLoai());

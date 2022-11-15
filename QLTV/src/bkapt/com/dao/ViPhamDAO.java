@@ -71,9 +71,10 @@ public class ViPhamDAO extends Connect{
         {
             String sql="Update ViPham set MaSV = ? , Ten = ? Where MaViPham = ?";
             PreparedStatement ps =con.prepareStatement(sql);
-                ps.setString(1, vp.getMaViPham());
-                ps.setString(2, vp.getMaSV());
-                ps.setString(3, vp.getTen());
+             //   ps.setString(1, vp.getMaViPham());
+                ps.setString(1, vp.getMaSV());
+                ps.setString(2, vp.getTen());
+                ps.setString(3, vp.getMaViPham());
              return ps.executeUpdate();
         }
         catch(Exception ex)

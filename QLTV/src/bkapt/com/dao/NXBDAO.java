@@ -72,10 +72,11 @@ public class NXBDAO extends Connect{
         {
             String sql="Update NXB set Ten = ? ,DiaChi = ? ,Email = ? Where MaNXB = ?";
             PreparedStatement ps =con.prepareStatement(sql);
-                ps.setString(1, vp.getMaNXB());
-                ps.setString(2, vp.getTen());
-                ps.setString(3, vp.getDiaChi());
-                ps.setString(4, vp.getEmail());
+                //ps.setString(1, vp.getMaNXB());
+                ps.setString(1, vp.getTen());
+                ps.setString(2, vp.getDiaChi());
+                ps.setString(3, vp.getEmail());
+                ps.setString(4, vp.getMaNXB());
              return ps.executeUpdate();
         }
         catch(Exception ex)

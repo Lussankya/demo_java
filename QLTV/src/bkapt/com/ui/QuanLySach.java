@@ -118,7 +118,7 @@ public class QuanLySach extends javax.swing.JInternalFrame {
         s.setMaSach(txtMaSach.getText());
         s.setTenSach(txtTenSach.getText());
         s.setMaTheLoai(theloaisach.getMaTheLoai());
-        s.setTacGia(tacgia.getMatg());
+        s.setTacGia(tacgia.getTen());
         s.setSoLuong(Integer.parseInt(txtSoLuong.getText()));
         s.setNxb(nxb.getMaNXB());
         Date date = jDateChooser.getDate();
@@ -144,7 +144,7 @@ public class QuanLySach extends javax.swing.JInternalFrame {
         s.setMaSach(txtMaSach.getText());
         s.setTenSach(txtTenSach.getText());
         s.setMaTheLoai(theloaisach.getMaTheLoai());
-        s.setTacGia(tacgia.getMatg());
+        s.setTacGia(tacgia.getTen());
         s.setSoLuong(Integer.parseInt(txtSoLuong.getText()));
         s.setNxb(nxb.getMaNXB());
         s.setNdtt(txtNoiDung.getText());

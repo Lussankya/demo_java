@@ -35,6 +35,8 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
     private List<Sach> listSach;
     DefaultListModel listDSsach;
     DefaultListModel modelList;
+    DefaultListModel idList;
+    DefaultListModel idSach;
     private SachDAO sdao;
     private PhieuMuonDAO pmdao;
     int current;
@@ -70,6 +72,9 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
      public void loadSach(){
         listDSsach = new DefaultListModel<>();
         modelList = new DefaultListModel();
+        idList = new DefaultListModel();
+        idSach = new DefaultListModel();
+        
         lists = pmdao.load();
         PhieuMuon pm = lists.get(current);
         SachPhieuMuonDao spmdao = new SachPhieuMuonDao();
@@ -83,7 +88,7 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
         listSach = sdao.load();
          for (Sach sach : listSach) {
              listDSsach.addElement(sach.getTenSach());
-             
+             idList.addElement(sach.getMaSach());
          }
        listSachCon.setModel(listDSsach);
     }
@@ -91,6 +96,9 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
         PhieuMuon pm =  new PhieuMuon();       
         pm.setMaPhieuMuon(txtMaPhieuMuon.getText());
         pm.setMaSV(txtMaSV.getText());
+        pm.setSoLuong(modelList.getSize());
+        pm.setMaSach((String) idSach.getElementAt(0));
+        idList.removeAllElements();
         for (int i = 0; i < modelList.getSize(); i++) {
             Object item = modelList.getElementAt(i);
              System.out.println("Item = " + item);
@@ -118,7 +126,7 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
              if(addBookSuccess == modelList.size()){
                  JOptionPane.showMessageDialog(null, "Thêm Phiếu Mượn thành công");
              }else{
-              JOptionPane.showMessageDialog(null, "Vui lòng nhập đúng thông tin trong Phiếu Mượn");
+              //JOptionPane.showMessageDialog(null, "Vui lòng nhập đúng thông tin trong Phiếu Mượn");
              }    
         }
         
@@ -830,6 +838,8 @@ public class QuanLyPhieuMuon extends javax.swing.JInternalFrame {
         int selected[] = listSachCon.getSelectedIndices(); // Lấy về các item được chọn
         for (int i = 0; i < selected.length; i++) {
             String valueRemove = (String) listDSsach.getElementAt(selected[i]);
+            String id = (String) idList.getElementAt(selected[i]);
+            idSach.addElement(id);
             modelList.addElement(valueRemove);
             listBookItem.setModel(modelList);
             txtSoLuong.setText(Integer.toString(modelList.getSize()));
